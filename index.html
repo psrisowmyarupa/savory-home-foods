@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Savory Home Foods - Authentic Godavari style South Indian home-cooked meals. Everything made to order. Surprise, AZ. Call +1(512)-871-9552">
+    <meta name="keywords" content="south indian food, godavari food, idli, biryani, chicken 65, home delivery, surprise az, telugu food">
+    <meta property="og:title" content="Savory Home Foods - Swachhamaina Godavari Ruchulu">
+    <meta property="og:description" content="Authentic Godavari style home-cooked meals. Everything made to order in Surprise, AZ.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <title>Savory Home Foods - Swachhamaina Godavari Ruchulu | Surprise, AZ</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Libre+Baskerville:wght@400;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --turmeric: #F4A300;
+            --deep-saffron: #FF6F00;
+            --cardamom: #8B6914;
+            --tandoori: #D84315;
+            --curry-leaf: #2E7D32;
+            --deep-green: #1B5E20;
+            --masala-red: #B71C1C;
+            --cream: #FFF8E7;
+            --ivory: #FFFEF7;
+            --charcoal: #1A1A1A;
+            --warm-gray: #6D6D6D;
+            --gold-accent: #FFD700;
+            
+            --font-display: 'Libre Baskerville', serif;
+            --font-hindi: 'Tiro Devanagari Hindi', serif;
+            --font-body: 'Karla', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .pattern-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, var(--tandoori) 35px, var(--tandoori) 70px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, var(--curry-leaf) 35px, var(--curry-leaf) 70px);
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(255, 254, 247, 0.98));
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 3px solid var(--turmeric);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            animation: slideDown 0.7s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(244, 163, 0, 0.3);
+            background: white;
+        }
+        
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--tandoori);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            font-family: var(--font-hindi);
+            font-size: 0.8rem;
+            color: var(--curry-leaf);
+            font-style: italic;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--deep-saffron);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--turmeric), var(--deep-saffron));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .order-btn {
+            background: linear-gradient(135deg, var(--tandoori), var(--masala-red));
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(216, 67, 21, 0.3);
+            border: 2px solid transparent;
+        }
+        
+        .order-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(216, 67, 21, 0.4);
+            border-color: var(--gold-accent);
+        }
+        
+        .order-btn::after {
+            display: none;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--cream) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(244, 163, 0, 0.12), transparent 60%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 0.9s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--turmeric), var(--deep-saffron));
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(244, 163, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            line-height: 1.1;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--tandoori), var(--deep-saffron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-hindi);
+            font-size: 1.8rem;
+            color: var(--curry-leaf);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        .contact-item a {
+            color: var(--tandoori);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            color: var(--warm-gray);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .primary-btn {
+            background: linear-gradient(135deg, var(--tandoori), var(--masala-red));
+            color: white;
+            padding: 1.2rem 2.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 25px rgba(216, 67, 21, 0.3);
+            border: 2px solid transparent;
+        }
+        
+        .primary-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 35px rgba(216, 67, 21, 0.4);
+            border-color: var(--gold-accent);
+        }
+        
+        .secondary-btn {
+            background: transparent;
+            color: var(--curry-leaf);
+            padding: 1.2rem 2.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 3px solid var(--curry-leaf);
+        }
+        
+        .secondary-btn:hover {
+            background: var(--curry-leaf);
+            color: white;
+            transform: translateY(-4px);
+        }
+        
+        .menu {
+            padding: 6rem 2rem;
+            background: var(--ivory);
+            position: relative;
+        }
+        
+        .menu::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--tandoori), var(--turmeric), var(--curry-leaf), var(--turmeric), var(--tandoori));
+        }
+        
+        .menu-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--curry-leaf), var(--deep-green));
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--charcoal);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--tandoori), var(--turmeric));
+            border-radius: 2px;
+        }
+        
+        .menu-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .category-section {
+            background: white;
+            border-radius: 30px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 3px solid var(--turmeric);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--turmeric), var(--deep-saffron));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 6px 20px rgba(244, 163, 0, 0.3);
+        }
+        
+        .category-header h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--tandoori);
+            font-weight: 700;
+        }
+        
+        .category-note {
+            background: linear-gradient(135deg, rgba(244, 163, 0, 0.1), rgba(255, 111, 0, 0.1));
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--turmeric);
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .menu-item {
+            background: linear-gradient(135deg, var(--cream), var(--ivory));
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+            border-color: var(--turmeric);
+        }
+        
+        .item-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .item-details {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .item-price {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--tandoori);
+            font-weight: 700;
+        }
+        
+        .features {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--ivory) 100%);
+        }
+        
+        .features-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--turmeric);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: var(--warm-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--tandoori) 0%, var(--masala-red) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-container h2 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .cta-container p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+        
+        .cta-phone {
+            display: inline-block;
+            background: white;
+            color: var(--tandoori);
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-phone:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #0a0a0a 100%);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--turmeric), var(--deep-saffron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--turmeric);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.9rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--turmeric);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            border-top: 2px solid rgba(244, 163, 0, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .category-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-container h2 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-phone {
+                font-size: 1.5rem;
+                padding: 1.2rem 2rem;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern-bg"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="logo.jpeg" alt="Savory Home Foods Logo">
+                </div>
+                <div class="logo-text">
+                    <h1>Savory Home Foods</h1>
+                    <span>Swachhamaina Godavari Ruchulu</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#features">About</a></li>
+                <li><a href="#order" class="order-btn">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">🔥 Everything Made to Order</span>
+                <h1><span class="highlight">Authentic</span> Godavari Style Home Cooking</h1>
+                <p class="hero-subtitle">Swachhamaina Godavari Ruchulu</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        📞 <a href="tel:+15128719552">+1 (512) 871-9552</a>
+                    </div>
+                    <div class="contact-item">
+                        📍 Surprise, AZ
+                    </div>
+                </div>
+                
+                <p class="hero-description">
+                    Experience the authentic flavors of Godavari region with our traditional recipes. 
+                    Every dish is prepared fresh to order using premium ingredients and time-honored techniques.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="primary-btn">View Full Menu</a>
+                    <a href="tel:+15128719552" class="secondary-btn">Call to Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="menu-container">
+            <div class="section-header">
+                <span class="section-badge">Our Menu</span>
+                <h2 class="section-title">Traditional Delicacies</h2>
+            </div>
+
+            <div class="menu-categories">
+                <!-- Breakfast -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">☀️</div>
+                        <h2>Breakfast</h2>
+                    </div>
+                    <div class="category-note">All items served with two chutneys and sambar</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Idli</div>
+                            <div class="item-details">4 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mysore Bonda</div>
+                            <div class="item-details">5 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pesarattu Upma</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mysore Bajji</div>
+                            <div class="item-details">8 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Punugulu</div>
+                            <div class="item-details">8 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Vada</div>
+                            <div class="item-details">4 pieces</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pongal</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Plain Dosa</div>
+                            <div class="item-details">2 pieces</div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Onion Dosa</div>
+                            <div class="item-details">2 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Egg Dosa</div>
+                            <div class="item-details">2 pieces</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Poori with Aloo Besan Curry</div>
+                            <div class="item-details">2 pieces</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appetizers -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🌶️</div>
+                        <h2>Appetizers</h2>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Mirchi Bajji</div>
+                            <div class="item-details">3 pieces</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Onion Pakoda</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Aratikay Bajji</div>
+                            <div class="item-details">4 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Panipuri</div>
+                            <div class="item-details">6 pieces</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Batani Chaat</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Paneer 65</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Paneer Majestic</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Chicken 65</div>
+                            <div class="item-price">$10</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Chicken Majestic</div>
+                            <div class="item-price">$10</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Chilli Chicken</div>
+                            <div class="item-price">$10</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Shrimp 65</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pulao's & Biryani -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🍚</div>
+                        <h2>Pulao's & Biryani</h2>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Veg Pulao</div>
+                            <div class="item-price">$10</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Paneer Pulao</div>
+                            <div class="item-price">$11</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mushroom Pulao</div>
+                            <div class="item-price">$11</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pachhi Mirchi Paneer Pulao</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Chicken Pulao</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pachhi Mirchi Chicken Pulao</div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Natukodi Pulao</div>
+                            <div class="item-price">$14</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Lamb Pulao</div>
+                            <div class="item-price">$14</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Chittimithyalu Mutton Biryani</div>
+                            <div class="item-price">$15</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Shrimp Pulao</div>
+                            <div class="item-price">$13</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Veg Curries -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🥘</div>
+                        <h2>Vegetarian Curries</h2>
+                    </div>
+                    <div class="category-note">12 OZ servings</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Gutti Vankaya Curry</div>
+                            <div class="item-details">Godavari Style</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Aloo Kurma</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Paneer Cashew Gravy Curry</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mushroom Cashew Curry</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Phool Makhana Cashew Curry</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Phool Makhana Drumstick Curry</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Vankaya Pachhi Batani Curry</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Dal with Any Combination</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Bindi Fry</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Tindora 65</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Gobi 65</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Aloo 65</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Veg Curries -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🍗</div>
+                        <h2>Non-Vegetarian Curries</h2>
+                    </div>
+                    <div class="category-note">12 OZ servings</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Chicken Curry</div>
+                            <div class="item-price">$10</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mutton Curry</div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Shrimp Curry</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Fish Fry</div>
+                            <div class="item-details">3 pieces</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Fish Pulusu</div>
+                            <div class="item-details">3 pieces</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Nettallu Fish Fry</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Natukodi Curry</div>
+                            <div class="item-price">$13</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pure Godavari Delicacies -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">⭐</div>
+                        <h2>Pure Godavari Delicacies</h2>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Beerakay with Prawns Curry</div>
+                            <div class="item-details">Ridge Guard - 12 OZ</div>
+                            <div class="item-price">$11</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Okra with Shrimp Pulusu</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$11</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Munakkada Mutton Curry</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$13</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Munakkada Chicken Curry</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$11</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Munakkada Prawn Curry</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Nettallu Vankaya Curry</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Gummadikay Pulusu with Dal</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Paakam Gaarelu</div>
+                            <div class="item-details">5 pieces</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Perugu Vada / Dahi Vada</div>
+                            <div class="item-details">5 pieces</div>
+                            <div class="item-price">$7</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soups -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🍵</div>
+                        <h2>Soups</h2>
+                    </div>
+                    <div class="category-note">12 OZ servings</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Sambar</div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Rasam</div>
+                            <div class="item-price">$4</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mysore Rasam</div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Majjiga Pulusu/Charu</div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pappu Charu</div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pesara Pappu Charu</div>
+                            <div class="item-price">$5</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pepper Rasam</div>
+                            <div class="item-price">$4</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Ajwain Rasam</div>
+                            <div class="item-price">$4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sweets -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🍰</div>
+                        <h2>Sweets</h2>
+                    </div>
+                    <div class="category-note">Made to order - Minimum 2 lbs (Min 20 for Bobbattlu)</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Bobbattlu</div>
+                            <div class="item-details">4 pieces (Min 20)</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Sunnundalu with Jaggery</div>
+                            <div class="item-details">per lb</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Ravva Laddu</div>
+                            <div class="item-details">per lb</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Kajjikayalu</div>
+                            <div class="item-details">per lb</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Kobbari Laddu</div>
+                            <div class="item-details">per lb</div>
+                            <div class="item-price">$9</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Soft Besan Laddu</div>
+                            <div class="item-details">per lb</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Gulab Jamun</div>
+                            <div class="item-details">4 pieces</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sticky Sweets -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🍯</div>
+                        <h2>Sticky Sweets</h2>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Poornalu/Boorelu</div>
+                            <div class="item-details">4 pieces</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Semiya Halwa</div>
+                            <div class="item-details">Vermicelli Halwa - 12 OZ</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Pineapple Kesari</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Bread Halwa</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Rice Kheer/Paramannam</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Annavaram Style Satyanarayana Swamy Prasadam</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Chakkara Pongali</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Podi's -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🌾</div>
+                        <h2>Podi's (Spice Powders)</h2>
+                    </div>
+                    <div class="category-note">No added colours and preservatives • Made to order - Pre-order 2 days in advance • Mix and match any 2 for $15</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Kandi Podi</div>
+                            <div class="item-details">10 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Daniya Podi</div>
+                            <div class="item-details">10 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Karivepaku Podi</div>
+                            <div class="item-details">10 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Nuvvula Podi</div>
+                            <div class="item-details">10 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Palli Podi</div>
+                            <div class="item-details">10 OZ</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Veg Pickles -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🥒</div>
+                        <h2>Non-Veg Pickles</h2>
+                    </div>
+                    <div class="category-note">No added colours and preservatives • Made to order - Pre-order 2 days in advance</div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Chicken Pickle</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$10</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Prawn Pickle</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$11</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Mutton Pickle</div>
+                            <div class="item-details">12 OZ</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batters -->
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-icon">🥣</div>
+                        <h2>Batters</h2>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-name">Idli/Dosa Batter</div>
+                            <div class="item-details">2 lb</div>
+                            <div class="item-price">$6</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Idli/Dosa Batter</div>
+                            <div class="item-details">4 lb</div>
+                            <div class="item-price">$12</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Vada Batter</div>
+                            <div class="item-details">2 lb</div>
+                            <div class="item-price">$8</div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-name">Vada Batter</div>
+                            <div class="item-details">4 lb</div>
+                            <div class="item-price">$15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="menu-container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2 class="section-title">The Savory Home Difference</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🍳</div>
+                    <h3>Made to Order</h3>
+                    <p>
+                        Every dish is prepared fresh when you order. No pre-cooked meals, 
+                        just authentic home-style cooking.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>No Preservatives</h3>
+                    <p>
+                        All our podis and pickles contain no artificial colors or preservatives. 
+                        Pure and natural ingredients only.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏡</div>
+                    <h3>Godavari Authentic</h3>
+                    <p>
+                        Traditional Godavari region recipes passed down through generations, 
+                        bringing you pure Telugu flavors.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Home-Style Cooking</h3>
+                    <p>
+                        Prepared with the same love and care you'd find in a traditional Telugu home. 
+                        Swachhamaina Godavari Ruchulu.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Premium Quality</h3>
+                    <p>
+                        We source the finest ingredients and spices to ensure every dish 
+                        meets the highest standards of taste and quality.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3>Easy Ordering</h3>
+                    <p>
+                        Simply call us to place your order. We're here to serve you with 
+                        authentic home-cooked meals in Surprise, AZ.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="order">
+        <div class="cta-container">
+            <h2>Ready to Order?</h2>
+            <p>
+                Call us now to place your order. Everything is made fresh to order, 
+                so please allow appropriate preparation time.
+            </p>
+            <a href="tel:+15128719552" class="cta-phone">📞 (512) 871-9552</a>
+            <p style="margin-top: 2rem; font-size: 1.1rem;">
+                <strong>Note:</strong> Some items require pre-ordering 2 days in advance. 
+                Please call to confirm availability and preparation time.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Savory Home Foods</h3>
+                <p><strong>Swachhamaina Godavari Ruchulu</strong></p>
+                <p>Sri Sowmya Rupa Putta</p>
+                <p>📞 <a href="tel:+15128719552" style="color: var(--turmeric); text-decoration: none;">+1 (512) 871-9552</a></p>
+                <p>📍 Surprise, Arizona</p>
+                <p style="margin-top: 1rem;">
+                    Authentic Godavari style home cooking. Everything made to order with 
+                    traditional recipes and premium ingredients.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Full Menu</a></li>
+                    <li><a href="#features">About Us</a></li>
+                    <li><a href="#order">Order Now</a></li>
+                    <li><a href="tel:+15128719552">Call Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Specialties</h4>
+                <ul>
+                    <li><a href="#menu">Breakfast Items</a></li>
+                    <li><a href="#menu">Biryanis & Pulaos</a></li>
+                    <li><a href="#menu">Godavari Delicacies</a></li>
+                    <li><a href="#menu">Sweets & Podis</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Savory Home Foods. All rights reserved. Made with ❤️ and authentic Godavari spices.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 100) {
+                nav.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.menu-item, .feature-card, .category-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
