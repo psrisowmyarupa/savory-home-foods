@@ -580,6 +580,119 @@
             line-height: 1.7;
         }
         
+        /* Certificate Section */
+        .certificate {
+            padding: 6rem 2rem;
+            background: var(--ivory);
+        }
+        
+        .certificate-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .certificate-card {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 3px solid var(--turmeric);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .certificate-badge {
+            text-align: center;
+        }
+        
+        .certificate-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--turmeric);
+            transition: transform 0.3s ease;
+        }
+        
+        .certificate-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .certificate-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--cream), var(--ivory));
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .cert-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cert-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--turmeric), var(--deep-saffron));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(244, 163, 0, 0.3);
+        }
+        
+        .cert-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+        
+        .cert-info p {
+            color: var(--warm-gray);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .certification-note {
+            background: linear-gradient(135deg, var(--curry-leaf), var(--deep-green));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(46, 125, 50, 0.3);
+        }
+        
+        .certification-note h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .certification-note p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        /* CTA Section */
         .cta-section {
             padding: 6rem 2rem;
             background: linear-gradient(135deg, var(--tandoori) 0%, var(--masala-red) 100%);
@@ -706,6 +819,11 @@
             .footer-container {
                 grid-template-columns: 1fr 1fr;
             }
+            
+            .certificate-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
         
         @media (max-width: 768px) {
@@ -758,6 +876,15 @@
                 font-size: 1.5rem;
                 padding: 1.2rem 2rem;
             }
+            
+            .certificate-card {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+            
+            .certification-note h3 {
+                font-size: 1.5rem;
+            }
         }
         
         @media (prefers-reduced-motion: reduce) {
@@ -788,6 +915,7 @@
             <ul class="nav-links">
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#features">About</a></li>
+                <li><a href="#certification">Certification</a></li>
                 <li><a href="#order" class="order-btn">Order Now</a></li>
             </ul>
         </div>
@@ -1444,6 +1572,68 @@
         </div>
     </section>
 
+    <!-- Certificate Section -->
+    <section class="certificate" id="certification">
+        <div class="menu-container">
+            <div class="section-header">
+                <span class="section-badge">Certified & Licensed</span>
+                <h2 class="section-title">Food Safety Certified</h2>
+            </div>
+            <div class="certificate-content">
+                <div class="certificate-card">
+                    <div class="certificate-badge">
+                        <img src="food-handler-certificate.jpeg" alt="ANAB Accredited Food Handler Certificate - Sri Sowmya Rupa Putta" class="certificate-image">
+                    </div>
+                    <div class="certificate-details">
+                        <div class="cert-item">
+                            <div class="cert-icon">✓</div>
+                            <div class="cert-info">
+                                <h3>ANAB Accredited</h3>
+                                <p>Food Handler Certified by AAA Food Handler</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">📋</div>
+                            <div class="cert-info">
+                                <h3>Certificate ID</h3>
+                                <p>1769458427</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">📅</div>
+                            <div class="cert-info">
+                                <h3>Issue Date</h3>
+                                <p>January 26, 2026</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">⏰</div>
+                            <div class="cert-info">
+                                <h3>Valid For</h3>
+                                <p>3 Years</p>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">👤</div>
+                            <div class="cert-info">
+                                <h3>Certified Handler</h3>
+                                <p>Sri Sowmya Rupa Putta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certification-note">
+                    <h3>🏅 Your Safety is Our Priority</h3>
+                    <p>
+                        All food preparation is done by a certified food handler trained in proper food safety, 
+                        hygiene practices, and sanitation standards. We follow strict protocols to ensure 
+                        every meal is prepared in a clean, safe environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section" id="order">
         <div class="cta-container">
             <h2>Ready to Order?</h2>
@@ -1467,9 +1657,10 @@
                 <p>Sri Sowmya Rupa Putta</p>
                 <p>📞 <a href="tel:+15128719552" style="color: var(--turmeric); text-decoration: none;">+1 (512) 871-9552</a></p>
                 <p>📍 Surprise, Arizona</p>
+                <p>✅ ANAB Accredited Food Handler Certified</p>
                 <p style="margin-top: 1rem;">
                     Authentic Godavari style home cooking. Everything made to order with 
-                    traditional recipes and premium ingredients.
+                    traditional recipes and premium ingredients. Food safety certified.
                 </p>
             </div>
             <div class="footer-links">
@@ -1539,6 +1730,15 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+        
+        // Animate certificate section
+        const certCard = document.querySelector('.certificate-card');
+        if (certCard) {
+            certCard.style.opacity = '0';
+            certCard.style.transform = 'translateY(30px)';
+            certCard.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(certCard);
+        }
     </script>
 </body>
 </html>
